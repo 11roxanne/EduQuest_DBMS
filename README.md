@@ -4,9 +4,9 @@ Designed and developed a robust MySQL database management system to facilitate i
 
 Functionalities :
 
-1.Login
+1.Signup 
 
-2.Signup
+2.Login 
 
 3. Add InstructorInfo
    
