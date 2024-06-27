@@ -35,7 +35,7 @@ app.use("/images", express.static(path.join(__dirname, "public", "images")));
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "vedu11",
+    password: "******",
     database: "eduquest",
 });
 db.connect((err) => {
