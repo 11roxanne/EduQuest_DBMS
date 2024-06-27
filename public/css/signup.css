@@ -1,0 +1,100 @@
+.login {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login__container {
+    display: flex;
+    gap: 2rem; /* Adjust the gap between cards */
+}
+
+.login__card {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.card__content {
+    margin-bottom: 2rem;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+.form__name {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.card__image img {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 2rem;
+}
+
+.login__form input[type="text"],
+.login__form input[type="password"],
+.login__form input[type="gmail"],
+.login__form input[type="qualification"],
+.login__form input[type="expertise"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.login__form .btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-bg2);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login__form .btn:hover {
+    background-color: var(--color-bg2-hover);
+}
+
+
+
+/* =================== MEDIA QUERIES (PHONEs) =================== */
+@media screen and (max-width: 600px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact__form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form__name {
+        flex-direction: column;
+    }
+
+    .form__name input[type="text"] {
+        width: 100%;
+    }
+}
+.login__form input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}

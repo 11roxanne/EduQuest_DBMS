@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Eduquest</title>
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/instructordashboard.css">
+
+  <style>
+    body {
+      background-image: url("./images/bg-texture.png");
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav__container">
+      <a href="index.html">
+        <h4>EduQuest</h4>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+      <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav><br> <br> <br> <br><br>
+
+  <h3><center>Instructor Dashboard</center></h3><br><br>
+  <div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <% if (instructors.length > 0) { %>
+            <ul>
+                <% instructors.forEach(function(instructor) { %>
+                    <li>
+                        <h2>Instructor Information</h2>
+                        <p>Qualification: <%= instructor.qualification %></p>
+                        <p>Expertise: <%= instructor.expertise %></p>
+                        <p>Work Experience: <%= instructor.work_experience %></p>
+                        <p>Major Subjects: <%= instructor.major_subjects %></p>
+                        <p>Minor Subjects: <%= instructor.minor_subjects %></p>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No instructor information found.</p>
+        <% } %>
+    </div>
+</div>
+<br><br><br>
+
+<div class="container form-container">
+<div class="card">
+  <div class="card-header">
+      <h1>Add Course</h1>
+  </div>
+  <div class="card-body">
+    <form action="/add_course" method="POST">
+        <div class="form-group">
+            <label for="coursename">Course Name:</label>
+            <input type="text" id="coursename" name="coursename" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" name="description" rows="4" required>
+        </div>
+        <div class="form-group">
+            <label for="instructor">Instructor:</label>
+            <input type="text" id="instructor" name="instructor" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+</div>
+<br><br><br><br>
+
+
+<footer>
+  <div class="container footer__container">
+      <div class="footer__1">
+          <a href="index.html" class="footer__logo">
+              <h4>EduQuest</h4>
+          </a>
+          <p>
+              Grow your skills to advance your career part!
+          </p>
+      </div>
+
+      <div class="footer__2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__3">
+          <h4>Privacy</h4>
+          <ul class="privacy">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Refund Policy</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__4">
+          <h4>Contact Us</h4>
+          <div>
+              <p>+01 234 567 8910</p>
+              <p>bytllhcinar@gmail.com</p>
+          </div>
+
+          <ul class="footer__socials">
+              <li>
+                  <a href="#"><i class="uil uil-facebook-f"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="uil uil-instagram"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="uil uil-twitter"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer__copyright">
+      <small>Copyright &copy; EduQuest Software</small>
+  </div>
+</footer>
+
+
+<script src="./main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+/* Style for the welcome section */
+.welcome {
+    text-align: left; /* Align contents to the left */
+    padding: 50px 0 20px; /* Add space below the welcome section */
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Style for the form */
+form {
+    text-align: left;
+    max-width: 400px; /* Set maximum width for the form */
+    margin: 0; /* Remove default margin */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    width: calc(100% - 20px); /* Reduce the width by 20px for padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    display: block; /* Display the button as a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
